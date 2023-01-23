@@ -173,10 +173,10 @@ footer {
   :root {
     font-size: 0.90rem;
   }
-  /*header{
+  header{
     display: block;
     text-align: center;
-  }*/
+  }
   #welcome-title {
     font-size: 3.5rem;
   }
