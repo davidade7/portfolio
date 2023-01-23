@@ -111,11 +111,22 @@ main section {
 .project-tile h3 {
   text-align: center;
   color: var(--main-white);
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.5rem 0.5rem;
   font-weight: normal;
 }
 .project-tile:hover h3 {
   font-weight: bold;
+}
+.project-tile .techno-icons {
+  font-size: 2rem;
+  color: var(--main-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+.project-tile .techno-icons i {
+  padding: 0 0.5rem;
 }
 
   /* contact section */
