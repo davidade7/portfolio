@@ -105,6 +105,7 @@ main section {
 }
 .project-tile img {
   width: 100%;
+  height: 400px;
   object-fit: cover;
 }
 .project-tile h3 {
@@ -163,6 +164,9 @@ footer {
   #project-list {
     gap: 1.5rem;
   }
+  .project-tile img {
+    height: 350px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -198,6 +202,9 @@ footer {
     display: block;
     padding: 1rem;
   }
+  .project-tile img {
+    height: 300px;
+  }
   #profile-link {
     font-size: 1.8rem;
   }
@@ -214,6 +221,9 @@ footer {
   #project-list {
     grid-template-columns: 1fr; 
     gap: 1.2rem;
+  }
+  .project-tile img {
+    height: 250px;
   }
   footer {
     font-size: 1.3rem;
