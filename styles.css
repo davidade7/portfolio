@@ -126,6 +126,17 @@ main section {
 .project-tile .techno-icons i {
   padding: 0 0.5rem;
 }
+.project-tile .project-info .github {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+.project-tile .project-info .github .btn {
+  padding: 0.2rem 0.4rem;
+  border: solid 2px var(--main-white);
+  border-radius: 5px;
+  color: var(--main-white);
+}
 .project-preview {
   position: relative;
   /* border-bottom: 3px solid var(--main-red); */
@@ -163,7 +174,7 @@ main section {
   cursor: pointer;
 }
 .project-hover .btn:hover i {
-  animation: test 1s linear infinite;
+  animation: test 0.5s linear infinite;
 }
 
 @keyframes test {
