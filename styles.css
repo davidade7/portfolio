@@ -162,7 +162,27 @@ main section {
 .project-hover .btn:hover {
   cursor: pointer;
 }
+.project-hover .btn:hover i {
+  animation: test 1s linear infinite;
+}
 
+@keyframes test {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
   /* contact section */
 #contact {
@@ -234,11 +254,14 @@ footer {
     font-size: 1.4rem;
   }
   #projects {
-    padding: 80px 0 30px 0;
+    padding: 80px 5px 30px 5px;
   }
   #projects h2 {
     padding: 30px 0;
     font-size: 1.9rem;
+  }
+  #project-list {
+    gap: 2rem;
   }
   .project-tile {
     width: 300px;
