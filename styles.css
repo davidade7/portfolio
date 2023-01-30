@@ -310,6 +310,17 @@ footer {
   :root {
     font-size: 0.95rem;
   }
+  #welcome-section .content {
+    display: block;
+  }
+  #welcome-section .left, #welcome-section .right {
+    width: 100%;
+    min-height: auto;
+  }
+  #welcome-section .left {
+    padding-bottom: 100px;
+    border-right: 0;
+  }
   #welcome-section .left #welcome-title {
     font-size: 3.5rem;
   }
@@ -339,16 +350,6 @@ footer {
   }
   .section-title h2 {
     font-size: 1.8rem;
-  }
-  #welcome-section .content {
-    display: block;
-  }
-  #welcome-section .left, #welcome-section .right {
-    width: 100%;
-    min-height: auto;
-  }
-  #welcome-section .left {
-    padding-bottom: 100px;
   }
   #welcome-section .left #welcome-title {
     font-size: 3rem;
