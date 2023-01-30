@@ -7,6 +7,7 @@
   --darker-gray: #191D21;
 
   --main-background-color: #0d0d0d;
+  --secondary-background-color: #212121;
   --main-text-color: #cfcfcf;
   --secondary-color: #ff611c;
   --comment-color: #08a26A;
@@ -37,8 +38,8 @@ header {
   border-bottom: 3px solid var(--secondary-color);
   z-index: 99;
 }
-#portfolio-name {
-  font-size: 1.6rem;
+#portfolio-name h1 {
+  font-size: 2.4rem;
   letter-spacing: 0.1rem;
 }
 #navbar ul li {
@@ -46,7 +47,7 @@ header {
   font-size: 1.4rem;
 }
 .nav-link {
-  color: var(--main-white);
+  color: var(--main-text-color);
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.4rem;
@@ -79,29 +80,84 @@ main section {
   min-height: 100vh;
   width: 100%;
 }
+.section-title {
+  padding: 110px 0 30px;
+  text-align: center;
+  color: var(--main-white);
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+.section-title::before, .section-title::after {
+  color: var(--secondary-color);
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.section-title::before {
+  content: "< "
+}
+.section-title::after {
+  content: " >"
+}
 
   /* welcome section */
 #welcome-section {
-  background-color: var(--main-gray);
+  background: radial-gradient(ellipse at bottom center, #383838 0%, var(--secondary-background-color) 60%);
+  color: var(--main-text-color);
+}
+
+#welcome-section .content {
   display: flex; 
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--main-white);
 }
-#profile-img {
+#welcome-section .left, #welcome-section .right {
+  width: 50%;
+  min-height: 70vh;
+  padding: 25px;
+}
+#welcome-section .left {
+  border-right: 3px solid var(--secondary-color);
+}
+#welcome-section .left #profile-img {
   max-width: 300px;
   min-width: 125px;
   width: 25vw;
+  padding-bottom: 25px;
 }
-#welcome-title {
+#welcome-section .left #welcome-title {
   font-size: 4rem;
   margin-bottom: 0.4rem;
 }
-.welcome-description {
+#welcome-section .left .welcome-description {
   font-size: 2rem;
   font-style: italic;
   margin-bottom: 0.1rem;
+}
+#welcome-section .right #resume {
+  padding-bottom: 30px;
+}
+#welcome-section .right h3 {
+  font-size: 1.8rem;
+  padding-bottom: 15px;
+}
+#welcome-section .right #resume p {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-align: left;
+}
+#welcome-section .right #resume .date {
+  color: var(--secondary-color);
+  font-weight: bold;
+  padding-right: 1rem;
+}
+#flags {
+  display: flex;
+  justify-content: center;
+}
+#flags img {
+  width: 50px;
+  margin: 0 15px;
 }
 
   /* projects section */
