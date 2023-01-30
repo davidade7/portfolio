@@ -46,9 +46,7 @@ header {
 }
 .nav-link {
   color: var(--main-text-color);
-  margin-left: 1rem;
-  padding: 0.4rem;
-  border-bottom: 0;
+  padding: 0.8rem 0.4rem;
 }
 .nav-item .active::before, .nav-item .active::after {
   color: var(--secondary-color);
@@ -312,6 +310,9 @@ footer {
   :root {
     font-size: 0.95rem;
   }
+  #welcome-section .left #welcome-title {
+    font-size: 3.5rem;
+  }
   .project-tile {
     width: 325px;
   }  
@@ -325,8 +326,16 @@ footer {
     font-size: 0.90rem;
   }
   header{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+  }
+  .nav-link {
+    padding: 0 0.4rem;
+  }
+  #portfolio-name h1 {
+    font-size: 2rem;
   }
   .section-title h2 {
     font-size: 1.8rem;
@@ -341,8 +350,8 @@ footer {
   #welcome-section .left {
     padding-bottom: 100px;
   }
-  #welcome-title {
-    font-size: 3.5rem;
+  #welcome-section .left #welcome-title {
+    font-size: 3rem;
   }
   .welcome-description {
     font-size: 1.6rem;
@@ -376,8 +385,8 @@ footer {
   :root {
     font-size: 0.80rem;
   }
-  #welcome-title {
-    font-size: 2.8rem;
+  #welcome-section .left #welcome-title  {
+    font-size: 2.5rem;
   }
   .section-title h2 {
     font-size: 1.6rem;
