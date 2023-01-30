@@ -5,6 +5,11 @@
   --main-gray: #303841;
   --main-blue: #45567d;
   --darker-gray: #191D21;
+
+  --main-background-color: #0d0d0d;
+  --main-text-color: #cfcfcf;
+  --secondary-color: #ff611c;
+  --comment-color: #08a26A;
 }
 * {
   box-sizing: border-box;
@@ -19,8 +24,8 @@ body {
 
 /* header */
 header {
-  background-color: var(--main-red);
-  color: var(--main-white);
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +34,7 @@ header {
   top: 0;
   width: 100vw;
   height: 80px;
-  border-bottom: 3px solid var(--darker-gray);
+  border-bottom: 3px solid var(--secondary-color);
   z-index: 99;
 }
 #portfolio-name {
@@ -47,6 +52,24 @@ header {
   padding: 0.4rem;
   border-bottom: 0;
 }
+.nav-item .active::before, .nav-item .active::after {
+  color: var(--secondary-color);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.nav-item .active::before {
+  content: "< ";
+}
+.nav-item .active::after {
+  content: " >"
+}
+.nav-item .inactive {
+  color: var(--comment-color);
+}
+.nav-item .inactive::before {
+  content: "// ";
+}
+
 
 /* main */
 main {
