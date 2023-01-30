@@ -80,9 +80,13 @@ main section {
 }
 .section-title {
   padding: 110px 0 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-title h2 {
   font-size: 2.5rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 .section-title::before, .section-title::after {
   color: var(--secondary-color);
@@ -90,10 +94,12 @@ main section {
   font-weight: bold;
 }
 .section-title::before {
-  content: "< "
+  content: "<";
+  padding-right: 0.6rem;
 }
 .section-title::after {
-  content: " >"
+  content: " >";
+  padding-left: 0.6rem;
 }
 
   /* welcome section */
@@ -166,6 +172,7 @@ main section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 15px;
 }
 .project-tile {
   border: 1px solid var(--main-background-color);
@@ -173,7 +180,6 @@ main section {
 }
 .project-preview {
   position: relative;
-  background-color: palevioletred;
   height: 450px;
 }
 .project-tile img {
@@ -267,7 +273,6 @@ main section {
 
   /* contact section */
 #contact {
-  /* background-color: var(--secondary-background-color); */
   background: 
     linear-gradient(
       var(--secondary-background-color) 20%,
@@ -307,13 +312,10 @@ footer {
   :root {
     font-size: 0.95rem;
   }
-  #projects {
-    padding: 80px 0 60px 0;
-  }
   .project-tile {
     width: 325px;
-  }
-  .project-tile img {
+  }  
+  .project-preview {
     height: 418px;
   }
 }
@@ -326,6 +328,19 @@ footer {
     display: block;
     text-align: center;
   }
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  #welcome-section .content {
+    display: block;
+  }
+  #welcome-section .left, #welcome-section .right {
+    width: 100%;
+    min-height: auto;
+  }
+  #welcome-section .left {
+    padding-bottom: 100px;
+  }
   #welcome-title {
     font-size: 3.5rem;
   }
@@ -336,12 +351,8 @@ footer {
   #portfolio-name {
     font-size: 1.4rem;
   }
-  #projects {
-    padding: 80px 5px 30px 5px;
-  }
-  #projects h2 {
-    padding: 30px 0;
-    font-size: 1.9rem;
+  #welcome-section .right #resume p {
+    text-align: center;
   }
   #project-list {
     gap: 2rem;
@@ -349,8 +360,8 @@ footer {
   .project-tile {
     width: 300px;
   }
-  .project-tile img {
-    height: 385px;
+  .project-preview {
+    height: 385;
   }
   #profile-list li {
     display: block;
@@ -365,14 +376,16 @@ footer {
   :root {
     font-size: 0.80rem;
   }
-  #projects h2 {
-    padding: 20px 0;
+  #welcome-title {
+    font-size: 2.8rem;
+  }
+  .section-title h2 {
     font-size: 1.6rem;
   }
   .project-tile {
     width: 275px;
   }
-  .project-tile img {
+  .project-preview {
     height: 353px;
   }
   footer {
