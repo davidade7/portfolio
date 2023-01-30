@@ -10,6 +10,7 @@
   --secondary-background-color: #212121;
   --main-text-color: #cfcfcf;
   --secondary-color: #ff611c;
+  --secondary-color-lighter: #ff8f4b;
   --comment-color: #08a26A;
 }
 * {
@@ -21,12 +22,15 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  color: var(--main-text-color);
+}
+a {
+  text-decoration: none;
 }
 
 /* header */
 header {
   background-color: var(--main-background-color);
-  color: var(--main-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +52,6 @@ header {
 }
 .nav-link {
   color: var(--main-text-color);
-  text-decoration: none;
   margin-left: 1rem;
   padding: 0.4rem;
   border-bottom: 0;
@@ -79,11 +82,11 @@ main {
 main section {
   min-height: 100vh;
   width: 100%;
+  padding-bottom: 30px;
 }
 .section-title {
   padding: 110px 0 30px;
   text-align: center;
-  color: var(--main-white);
   font-size: 2.5rem;
   font-weight: normal;
 }
@@ -102,9 +105,7 @@ main section {
   /* welcome section */
 #welcome-section {
   background: radial-gradient(ellipse at bottom center, #383838 0%, var(--secondary-background-color) 60%);
-  color: var(--main-text-color);
 }
-
 #welcome-section .content {
   display: flex; 
   justify-content: center;
@@ -162,15 +163,7 @@ main section {
 
   /* projects section */
 #projects {
-  background-color: var(--main-blue);
-  padding: 80px;
-}
-#projects h2 {
-  padding: 40px 0;
-  text-align: center;
-  color: var(--main-white);
-  font-size: 2.5rem;
-  font-weight: normal;
+  background: radial-gradient(ellipse at top center, #383838 0%, var(--secondary-background-color) 60%);
 }
 #project-list {
   max-width: 1280px;
@@ -181,27 +174,30 @@ main section {
   flex-wrap: wrap;
 }
 .project-tile {
-  border: 1px solid var(--darker-gray);
-  background-color: var(--main-gray);
+  border: 1px solid var(--main-background-color);
   width: 350px;
 }
-.project-tile a {
-  text-decoration: none;
+.project-preview {
+  position: relative;
+  background-color: palevioletred;
+  height: 450px;
 }
 .project-tile img {
   width: 100%;
-  height: 450px;
+  height: 100%;
   object-fit: cover;
 }
-.project-tile h3 {
+.project-tile .project-info {
+  background-color: var(--main-background-color);
+}
+.project-tile h4 {
   text-align: center;
-  color: var(--main-white);
+  font-size: 1.2rem;
   padding: 0.5rem;
   font-weight: normal;
 }
 .project-tile .techno-icons {
   font-size: 2rem;
-  color: var(--main-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,20 +206,16 @@ main section {
 .project-tile .techno-icons i {
   padding: 0 0.5rem;
 }
-.project-tile .project-info .github {
+.project-tile .github {
   display: flex;
   justify-content: center;
   padding-bottom: 0.5rem;
 }
-.project-tile .project-info .github .btn {
+.project-tile .github .btn {
   padding: 0.2rem 0.4rem;
-  border: solid 2px var(--main-white);
+  border: solid 2px var(--main-text-color);
   border-radius: 5px;
-  color: var(--main-white);
-}
-.project-preview {
-  position: relative;
-  /* border-bottom: 3px solid var(--main-red); */
+  color: var(--main-text-color);
 }
 .project-hover {
   opacity: 0;
@@ -236,10 +228,10 @@ main section {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--main-gray);
-  opacity: 0.90;
+  background-color: var(--secondary-color-lighter);
+  opacity: 0.95;
   width: 100%;
-  height: calc(100% - 5px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,11 +240,11 @@ main section {
 .project-preview:hover .project-hover .btn {
   display: block;
   padding: 0.7rem 1.5rem;
-  border: solid 3px var(--darker-gray);
+  border: solid 3px var(--secondary-background-color);
   border-radius: 10px;
   font-size: 2rem;
-  background-color: var(--main-white);
-  color: var(--darker-gray);
+  background-color: var(--main-text-color);
+  color: var(--secondary-background-color);
 }
 .project-hover .btn:hover {
   cursor: pointer;
@@ -299,7 +291,6 @@ main section {
   padding: 0 1rem;
 }
 #profile-link {
-  text-decoration: none;
   color: var(--main-white);
   font-size: 2rem;
 }
