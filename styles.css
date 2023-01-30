@@ -66,6 +66,11 @@ main section {
   text-align: center;
   color: var(--main-white);
 }
+#profile-img {
+  max-width: 300px;
+  min-width: 125px;
+  width: 25vw;
+}
 #welcome-title {
   font-size: 4rem;
   margin-bottom: 0.4rem;
