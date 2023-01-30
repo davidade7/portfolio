@@ -44,13 +44,19 @@ header {
   display: inline;
   font-size: 1.4rem;
 }
-.nav-link {
+.nav-item a {
+  padding: 0.4rem;
+  color: var(--comment-color);
+}
+.nav-item a::before {
+  content: "// ";
+}
+
+.nav-item .active {
   color: var(--main-text-color);
-  padding: 0.8rem 0.4rem;
 }
 .nav-item .active::before, .nav-item .active::after {
   color: var(--secondary-color);
-  font-size: 1.6rem;
   font-weight: bold;
 }
 .nav-item .active::before {
@@ -59,12 +65,13 @@ header {
 .nav-item .active::after {
   content: " >"
 }
-.nav-item .inactive {
+
+/* .nav-item .inactive {
   color: var(--comment-color);
-}
-.nav-item .inactive::before {
+} */
+/* .nav-item .inactive::before {
   content: "// ";
-}
+} */
 
 
 /* main */
