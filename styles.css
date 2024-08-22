@@ -157,6 +157,9 @@ main section {
   font-weight: bold;
   padding-right: 1rem;
 }
+#welcome-section a {
+  color: var(--main-text-color);
+}
 #flags {
   display: flex;
   justify-content: center;
