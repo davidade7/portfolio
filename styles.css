@@ -6,6 +6,9 @@
   --secondary-color: #ff611c;
   --secondary-color-lighter: #ff8f4b;
   --comment-color: #08a26A;
+  
+  /* root font-size*/
+  font-size: 16px;
 }
 * {
   box-sizing: border-box;
@@ -122,8 +125,11 @@ main section {
   min-height: 70vh;
   padding: 25px;
 }
-#welcome-section .left {
+/* #welcome-section .left {
   border-right: 3px solid var(--secondary-color);
+} */
+#welcome-section .right {
+  border-left: 3px solid var(--secondary-color);
 }
 #welcome-section .left #profile-img {
   max-width: 300px;
@@ -159,6 +165,15 @@ main section {
 }
 #welcome-section a {
   color: var(--main-text-color);
+}
+#welcome-section .right ul {
+  list-style-type: square;
+  padding-left: 2rem;
+}
+#welcome-section .right li {
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.3rem;
 }
 #flags {
   display: flex;
