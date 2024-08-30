@@ -14,8 +14,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  /*border: 1px solid black*/
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -31,7 +29,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -40,21 +38,20 @@ header {
   z-index: 99;
 }
 #portfolio-name h1 {
-  font-size: 2.4rem;
-  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.15rem;
 }
 #navbar ul li {
   display: inline;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .nav-item a {
-  padding: 0.4rem;
+  padding: 0.5rem;
   color: var(--comment-color);
 }
 .nav-item a::before {
   content: "// ";
 }
-
 .nav-item .active {
   color: var(--main-text-color);
 }
@@ -68,13 +65,6 @@ header {
 .nav-item .active::after {
   content: " >"
 }
-
-/* .nav-item .inactive {
-  color: var(--comment-color);
-} */
-/* .nav-item .inactive::before {
-  content: "// ";
-} */
 
 
 /* main */
@@ -98,16 +88,16 @@ main section {
 }
 .section-title::before, .section-title::after {
   color: var(--secondary-color);
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 .section-title::before {
   content: "<";
-  padding-right: 0.6rem;
+  padding-right: 0.5rem;
 }
 .section-title::after {
   content: " >";
-  padding-left: 0.6rem;
+  padding-left: 0.5rem;
 }
 
   /* welcome section */
@@ -139,41 +129,75 @@ main section {
 }
 #welcome-section .left #welcome-title {
   font-size: 4rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 #welcome-section .left .welcome-description {
   font-size: 2rem;
   font-style: italic;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.25rem;
 }
 #welcome-section .right #resume {
-  padding-bottom: 30px;
+  padding-bottom: 1.5rem;
 }
 #welcome-section .right h3 {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   padding-bottom: 15px;
 }
 #welcome-section .right #resume p {
   margin-bottom: 15px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: left;
+}
+#welcome-section .right #resume p span {
+  line-height: 0.8;
 }
 #welcome-section .right #resume .date {
   color: var(--secondary-color);
   font-weight: bold;
-  padding-right: 1rem;
+}
+#master-degree::before {
+  content: url("./assets/svg/graduation.svg");
+  /* https://blendicons.com/icon/64afe6a98aba1478a27d481b-graduation-hat-for-isolated-on-white-background */
+  vertical-align: text-top;
+  margin: 0 0.5rem;
+}
+#aeroplane-engineer::before {
+  content: url("./assets/svg/aeroplane.svg");
+  /* https://blendicons.com/icon/649801bc517bdf4f1c34d179-use-of-airbus-for-civil-aerospace */
+  vertical-align: text-top;
+  margin: 0 0.5rem;
+}
+#helicopter-engineer::before {
+  content: url("./assets/svg/helicopter.svg");
+  /* https://blendicons.com/icon/649fd9d2ebae1fc6d00d306e-helicopter,--multi-purpose-flying-vehicle */
+  vertical-align: text-top;
+  margin: 0 0.5rem;
+}
+#code-retrainer::before {
+  content: url("./assets/svg/programming.svg");
+  /* https://blendicons.com/icon/64cb9a6049f991b68382fd93-programming-and-coding-software-on-a-web-browser */
+  vertical-align: text-top;
+  margin: 0 0.5rem;
 }
 #welcome-section a {
   color: var(--main-text-color);
+  text-decoration: underline dotted;
 }
 #welcome-section .right ul {
   list-style-type: square;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
 }
 #welcome-section .right li {
   padding-bottom: 0.5rem;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+}
+#coding-language {
+  padding-bottom: 1.5rem;
+}
+#coding-language div i {
+  font-size: 2rem;
+  margin: 0 0.25rem;
 }
 #flags {
   display: flex;
@@ -195,7 +219,7 @@ main section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 .project-tile {
   border: 1px solid var(--main-background-color);
@@ -215,8 +239,8 @@ main section {
 }
 .project-tile h4 {
   text-align: center;
-  font-size: 1.2rem;
-  padding: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 0 0.25rem 0;
   font-weight: normal;
 }
 .project-tile .techno-icons {
@@ -224,7 +248,7 @@ main section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 0.5rem;
+  padding: 0.25rem 0;
 }
 .project-tile .techno-icons i {
   padding: 0 0.5rem;
@@ -232,10 +256,10 @@ main section {
 .project-tile .github {
   display: flex;
   justify-content: center;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
 }
 .project-tile .github .btn {
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem 0.5rem;
   border: solid 2px var(--main-text-color);
   border-radius: 5px;
   color: var(--main-text-color);
@@ -262,7 +286,7 @@ main section {
 }
 .project-preview:hover .project-hover .btn {
   display: block;
-  padding: 0.7rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border: solid 3px var(--secondary-background-color);
   border-radius: 10px;
   font-size: 2rem;
@@ -341,10 +365,11 @@ footer {
   #welcome-section .left, #welcome-section .right {
     width: 100%;
     min-height: auto;
+    padding: 4rem 2rem;
   }
-  #welcome-section .left {
+  #welcome-section .right {
     padding-bottom: 100px;
-    border-right: 0;
+    border-left: 0;
   }
   #welcome-section .left #welcome-title {
     font-size: 3.5rem;
@@ -378,6 +403,9 @@ footer {
   }
   #welcome-section .left #welcome-title {
     font-size: 3rem;
+  }
+  #welcome-section .left, #welcome-section .right {
+    padding: 3rem 1.5rem;
   }
   .welcome-description {
     font-size: 1.6rem;
@@ -413,6 +441,9 @@ footer {
   }
   #welcome-section .left #welcome-title  {
     font-size: 2.5rem;
+  }
+  #welcome-section .left, #welcome-section .right {
+    padding: 2rem 1rem;
   }
   .section-title h2 {
     font-size: 1.6rem;
